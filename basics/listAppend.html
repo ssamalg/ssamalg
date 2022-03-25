@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  
+  <input type="text" name="text" id="inputText"/>
+  <button onclick="pushData();">click</button>
+  <ol id="pText"></ol>
+  
+  <script>
+      //BOTH APPEND AND LIST QUESTION DONE IN THIS
+      // create an array
+      var myArr = [];
+      
+      function pushData()
+      {
+          // get value from the input text
+          var inputText = document.getElementById('inputText').value;
+          //inputText="<li>" +inputText + "<\li>";
+          
+          // append data to the array
+          myArr.push(inputText);
+          var pval = "";
+          
+          for(i = 0; i < myArr.length; i++)
+          {
+              pval = pval+ "<li>"+myArr[i]+"</li>" ;
+          }
+          
+          // display array data
+          document.getElementById('pText').innerHTML = pval;
+      }
+      
+  </script>
+</body>
+
+</html>

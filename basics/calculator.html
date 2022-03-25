@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            padding: 23px;
+            background-color: skyblue;
+            color: white;
+            }
+        
+        #clear{
+        width: 270px;
+        border: 3px solid gray;
+            border-radius: 3px;
+            padding: 20px;
+            background-color: red;
+        }
+        
+        .formstyle
+        {
+        width: 300px;
+        height: 530px;
+        margin: auto;
+        border: 3px solid skyblue;
+        border-radius: 5px;
+        padding: 20px;
+        }
+        
+        
+        
+        input
+        {
+        width: 20px;
+        background-color: rgb(128, 36, 0);
+        color: white;
+        border: 3px solid gray;
+            border-radius: 5px;
+            padding: 26px;
+            margin: 5px;
+            font-size: 15px;
+        }
+        
+        
+        #edu{
+        width: 250px;
+        border: 5px solid black;
+            border-radius: 3px;
+            padding: 20px;
+            margin: auto;
+        }
+        
+        </style>
+</head>
+<body>
+    <h1> Calculator</h1>
+    <div class= "formstyle">
+    <form name = "form1">
+        
+        <!-- This input box shows the button pressed by the user in calculator. -->
+      <input id = "edu" type ="text" name = "answer"> <br> <br>
+      <!-- Display the calculator button on the screen. -->
+
+
+      
+      <!-- onclick() function display the number prsses by the user. -->
+      <input type = "button" value = "1" onclick = "dis( '1')">
+      <input type = "button" value = "2" onclick = "dis( '2')">
+      <input type = "button" value = "3" onclick = "dis( '3')">
+       <input type = "button" value = "+" onclick = "dis( '+')">
+      <br> <br>
+      
+      <input type = "button" value = "4" onclick = "dis( '4')">
+      <input type = "button" value = "5" onclick = "dis( '5')">
+      <input type = "button" value = "6" onclick = "dis( '6')">
+      <input type = "button" value = "-" onclick = "dis( '-')">
+      <br> <br>
+      
+      <input type = "button" value = "7" onclick = "dis( '7')">
+      <input type = "button" value = "8" onclick = "dis( '8')">
+      <input type = "button" value = "9" onclick = "dis( '9')">
+      <input type = "button" value = "*" onclick = "dis( '*')">
+      <br> <br>
+      
+      
+      <input type = "button" value = "/" onclick = "dis( '/')">
+      <input type = "button" value = "0" onclick = "dis( '0')">
+        <input type = "button" value = "." onclick ="dis( '.')" >
+        <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+      <input type = "button" value = "=" onclick="solve()">
+      <br> 
+      <!-- Display the Cancel button and erase all data entered by the user. -->
+      <input type = "button" value = "Clear All" onclick = "clr() " id= "clear" >
+      <br>
+    
+    <script>
+        //function for displaying values
+        function dis(val)
+        {
+        document.getElementById("edu").value+=val
+         }
+        //function for evaluation
+        function solve()
+        {
+        let x = document.getElementById("edu").value
+        let y = eval(x)
+        document.getElementById("edu").value = y
+        }
+        //function for clearing the display
+        function clr()
+        {
+        document.getElementById("edu").value = ""
+        }
+        </script> 
+      
+    </form>
+    </div>
+    
+</body>
+</html>

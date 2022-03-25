@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+Enter Your name<input type="text"id="txt">
+
+
+
+<button type="button"
+onclick="fun()">
+SUBMIT</button>
+
+<p id="demo"><tr>
+    <td>NAME</td>
+</tr></p>
+<button type="button"
+onclick="ab()">
+delete</button>
+
+<script>
+function fun(){
+myTitle = document.getElementById("txt").value;
+ document.getElementById("demo").innerHTML=myTitle;
+  //document.getElementById("demo").innerHTML = "";
+ }
+ function ab(){
+ document.getElementById("demo").innerHTML = "";
+ }
+</script> 
+
+
+</body>
+</html> 

@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Car from './User';
+import {Cycle2} from './User';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <Car/>,
+  <Cycle2/>
   </React.StrictMode>,
   document.getElementById('root')
 );
